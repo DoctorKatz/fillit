@@ -1,0 +1,3 @@
+/mnt/c/Users/n.kats/OneDrive/Desktop/piscine_21_school-master/fillit/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/n.kats/OneDrive/Desktop/piscine_21_school-master/fillit/cmake-build-debug/CMakeFiles/fillit.dir
+/mnt/c/Users/n.kats/OneDrive/Desktop/piscine_21_school-master/fillit/cmake-build-debug/CMakeFiles/edit_cache.dir

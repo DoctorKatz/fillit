@@ -5,7 +5,7 @@
       <config projectName="fillit" targetName="fillit" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
@@ -52,19 +52,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="ProjectId" id="1XiHYfJ591I9fSZ7aViH02U8amE" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="cf.advertisement.text.overridden" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.cidr.embedded.config" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\n.kats\OneDrive\Desktop\fillit_git\cmake-build-debug" />
+      <recent name="C:\Users\n.kats\OneDrive\Desktop\fillit_git\libft" />
+      <recent name="C:\Users\n.kats\OneDrive\Desktop\fillit_git" />
       <recent name="C:\Users\n.kats\OneDrive\Desktop\piscine_21_school-master\fillit" />
       <recent name="C:\Users\n.kats\OneDrive\Desktop\piscine_21_school-master\fillit\cmake-build-debug" />
-      <recent name="C:\Users\n.kats\OneDrive\Desktop\piscine_21_school-master\fillit\srcs" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -80,7 +84,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="fillit" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fillit" TARGET_NAME="fillit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fillit" RUN_TARGET_NAME="fillit">
+    <configuration name="fillit" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="map" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fillit" TARGET_NAME="fillit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fillit" RUN_TARGET_NAME="fillit">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -98,6 +102,7 @@
       <updated>1581522043679</updated>
       <workItem from="1581522046754" duration="2773000" />
       <workItem from="1581530083094" duration="17783000" />
+      <workItem from="1581609881854" duration="13161000" />
     </task>
     <servers />
   </component>
@@ -109,7 +114,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -119,9 +126,14 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/libft.h</url>
+          <url>file://$PROJECT_DIR$/libft/libft.h</url>
           <line>94</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/srcs/parser.c</url>
+          <line>28</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

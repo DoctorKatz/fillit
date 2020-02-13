@@ -11,24 +11,27 @@
 /* ************************************************************************** */
 
 #include "header.h"
+#include "string.h"
 
-int read_blocks_for_check(char *file_in_str, char *temp,char **argv)
+int read_blocks_for_check(char *file_in_str, char *temp, char **argv)
 {
+	int fd;
+
 	if ((fd = open(argv[1], O_RDONLY) == -1)) //check close(fd) in error
-		return (NULL);
-	if ((get_next_line(fd, *file_in_str) != 1) && ft_strlen(file_in_str) != 5 && file_in_str[5] != '\n')
-		return (NULL);
-	while (get_next_line(fd, *temp) == 1)
+		return (0);
+	if ((get_next_line(fd, &file_in_str) != 1) && ft_strlen(file_in_str) != 5 && file_in_str[5] != '\n')
+		return (0);
+	while (get_next_line(fd, &temp) == 1)
 	{
 		if (ft_strlen(temp) == 1 && temp[0] == '\n')
-			if (get_next_line(fd, *temp) != 1)//for \n like deviders block. I don't know, if last \n get in this "if", we loose
-				return (NULL);
-		if (ft_strlen(temp) != 5 && temp[4] != '\n')
-			return (NULL);
+			if (get_next_line(fd, &temp) != 1)//for \n like deviders block. I don't know, if last \n get in this "if", we loose
+				return (0);
+		if ((ft_strlen(temp) != 4 && temp[4] != '\n') || ((ft_strlen(temp) == 0)))
+			return (0);
 		ft_strncat(file_in_str, temp, 4);
 	}
-	if (check_simbols(file_in_str, temp) == -1)
-		return (NULL);
+	if (check_simbols(file_in_str) == -1)
+		return (0);
 	close(fd);
 	return (1);
 }
@@ -48,39 +51,50 @@ int check_simbols(char *str)
 	}
 }
 
-char *get_tetramino(int fd, char *file_in_str, char *temp;)
+int get_tetramino(int fd, char *file_in_str, char *temp)
 {
 	int i;
 
 	i = 0;
-	get_next_line(fd, *file_in_str);
+	get_next_line(fd, &file_in_str);
 	if (ft_strlen(temp) == 1 && temp[0] == '\n')
-		if (get_next_line(fd, *temp) != 1)//for \n like deviders block. I don't know, if last \n get in this "if", we loose
-			return (NULL);
-	while (get_next_line(fd, *temp) == 1 && i < 4) //TODO: check if in file will half tetramino (2 string)
+		if (get_next_line(fd, &temp) != 1)//for \n like deviders block. I don't know, if last \n get in this "if", we loose
+			return (0);
+	while (i < 4) //TODO: check if in file will half tetramino (2 string)
 	{
+		if(get_next_line(fd, &file_in_str) != 1)
+			return (0);
 		ft_strcat(file_in_str, temp);
 		i++;
 	}
-	return (file_in_str);
+	return (1);
 }
 
-void get_tetraminos (int fd, char *file_in_str, char *temp)
+int get_tetraminos_form (char *file_in_str, char *temp, char **argv)
 {
 	char	simbol;
+	int 	fd;
 	t_form	*head;
 	t_form	*buf;
-	t_form	buf2;
+	t_form	*buf2;
 
 	simbol = 'A';
 	if ((fd = open(argv[1], O_RDONLY) == -1)) //check close(fd) in error
-		return (NULL);
-	head = form_new(get_tetramino(fd, file_in_str, temp), simbol);
+		return (-1);
+	get_tetramino(fd, file_in_str, temp);
+	if (is_it_tetra(file_in_str) != 0)
+		return (-1);
+	head = form_new(file_in_str, simbol);
 	buf2 = head;
-	while (file_in_str[6] != '\0') //TODO: This is not working becous in after ft_strcat will \0 at the end
+	while (get_tetramino(fd, file_in_str, temp) != -1) //TODO: This is not working becous in after ft_strcat will \0 at the end
 	{
-		buf = form_new(get_tetramino(fd, file_in_str, temp), ++simbol);
+		if (is_it_tetra(file_in_str) != 0)
+			return (-1);
+		buf = form_new(file_in_str, ++simbol);
 		buf2->next = buf;
 		buf2 = buf;
 	}
+	close(fd);
+	solution(head);
+	return (1);
 }

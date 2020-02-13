@@ -16,6 +16,7 @@ int		is_it_tetra(char *buf)
 {
 	int	i;
 	int	count;
+	int	num;
 
 	i = 0;
 	count = 0;
@@ -23,6 +24,7 @@ int		is_it_tetra(char *buf)
 	{
 		if (buf[i] == '#')
 		{
+			num++;
 			if (i - 1 >= 0 && buf[i - 1] == '#')
 				count++;
 			if (i - 5 >= 0 && buf[i - 5] == '#')
@@ -34,4 +36,5 @@ int		is_it_tetra(char *buf)
 		}
 		i++;
 	}
+	return ((count == 6 || count == 8) && num == 4);
 }

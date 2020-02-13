@@ -12,7 +12,7 @@
 
 #include "header.h"
 
-t_form		*form_new(char **buf, char symbol)
+t_form		*form_new(char *buf, char symbol)
 {
 	t_form	*new;
 	int		row;

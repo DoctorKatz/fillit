@@ -6,7 +6,7 @@
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 19:45:21 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/12 18:24:47 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/13 01:29:58 by lgunship         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include "libft/libft.h"
+# include "libft.h"
+#include "get_next_line.h"
 
 typedef struct			s_form //I think, my type is a good idea, kek
 {
@@ -48,6 +49,12 @@ int						if_overlap(t_board *board, t_form *form);
 int						is_it_tetra(char *buf);
 void					solution(t_form *form);
 int						solve_algorithm(t_board *board, t_form *form);
+
+char					*read_tetramino(int fd, char **line);
+int						check_tetramino_line(char **line);
+
+#define MAX_BLOCKS 20
+#define MAX_SIMBOLS 5
 
 #endif
 

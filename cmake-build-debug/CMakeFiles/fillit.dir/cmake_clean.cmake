@@ -10,11 +10,11 @@ file(REMOVE_RECURSE
   "CMakeFiles/fillit.dir/srcs/form_new.o"
   "CMakeFiles/fillit.dir/srcs/if_overlap.o"
   "CMakeFiles/fillit.dir/srcs/is_it_tetra.o"
+  "CMakeFiles/fillit.dir/srcs/mian.o"
   "CMakeFiles/fillit.dir/srcs/solution.o"
   "CMakeFiles/fillit.dir/srcs/solve_algorithm.o"
-  "CMakeFiles/fillit.dir/srcs/mian.o"
-  "fillit.pdb"
   "fillit"
+  "fillit.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

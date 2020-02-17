@@ -25,6 +25,9 @@ CMakeFiles/fillit.dir/libft/ft_strcat.c.o: ../libft/ft_strcat.c
 CMakeFiles/fillit.dir/libft/ft_strchr.c.o: ../libft/ft_strchr.c
 CMakeFiles/fillit.dir/libft/ft_strchr.c.o: ../libft/libft.h
 
+CMakeFiles/fillit.dir/libft/ft_strclr.c.o: ../libft/ft_strclr.c
+CMakeFiles/fillit.dir/libft/ft_strclr.c.o: ../libft/libft.h
+
 CMakeFiles/fillit.dir/libft/ft_strdel.c.o: ../libft/ft_strdel.c
 
 CMakeFiles/fillit.dir/libft/ft_strdup.c.o: ../libft/ft_strdup.c

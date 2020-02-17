@@ -53,7 +53,7 @@ int						solve_algorithm(t_board *board, t_form *form);
 
 int						read_blocks_for_check(char *file_in_str, char *temp,char **argv);
 int						check_simbols(char *str);
-int						get_tetramino(int fd, char *file_in_str, char *temp);
+char						*get_tetramino(int fd, char *file_in_str, char *temp);
 int						get_tetraminos_form (char *file_in_str, \
 												char *temp, char **argv);
 

@@ -19,14 +19,14 @@ int read_blocks_for_check(char *file_in_str, char *temp, char **argv)
 
 	if ((fd = open(argv[1], O_RDONLY) == -1)) //check close(fd) in error
 		return (0);
-	if ((get_next_line(fd, &file_in_str) != 1) && ft_strlen(file_in_str) != 5 && file_in_str[5] != '\n')
-		return (0);
+	//if ((get_next_line(fd, &file_in_str) != 1) && ft_strlen(file_in_str) != 5 && file_in_str[5] != '\n')
+		//return (0);
 	while (get_next_line(fd, &temp) == 1)
 	{
-		if (ft_strlen(temp) == 1 && temp[0] == '\n')
+		if (ft_strlen(temp) == 1 && temp[0] == '\0')
 			if (get_next_line(fd, &temp) != 1)//for \n like deviders block. I don't know, if last \n get in this "if", we loose
 				return (0);
-		if ((ft_strlen(temp) != 4 && temp[4] != '\n') || ((ft_strlen(temp) == 0)))
+		if ((ft_strlen(temp) != 4 && temp[4] != '\n') && ((temp[0] != '\0')))
 			return (0);
 		ft_strncat(file_in_str, temp, 4);
 	}
@@ -43,7 +43,7 @@ int check_simbols(char *str)
 	len = ft_strlen(str);
 	while (len > 0)
 	{
-		if (str[len] != '#' || str[len] != '.')
+		if (str[len] != '#' && str[len] != '.' && str[ft_strlen(str)])
 		{
 			return (-1);
 		}
@@ -51,23 +51,28 @@ int check_simbols(char *str)
 	}
 }
 
-int get_tetramino(int fd, char *file_in_str, char *temp)
+char  *get_tetramino(int fd, char *file_in_str, char *temp)
 {
 	int i;
 
 	i = 0;
+	ft_strclr(file_in_str);
 	get_next_line(fd, &file_in_str);
-	if (ft_strlen(temp) == 1 && temp[0] == '\n')
+	file_in_str[4] = 'q';
+	file_in_str[5] = '\0';
+	if (ft_strlen(temp) == 1 && temp[0] == '\0')
 		if (get_next_line(fd, &temp) != 1)//for \n like deviders block. I don't know, if last \n get in this "if", we loose
-			return (0);
+			return ("error");
 	while (i < 4) //TODO: check if in file will half tetramino (2 string)
 	{
-		if(get_next_line(fd, &file_in_str) != 1)
-			return (0);
+		if(get_next_line(fd, &temp) != 1)
+			return ("error");
+		temp[4] = 'q';
+		temp[5] = '\0';
 		ft_strcat(file_in_str, temp);
 		i++;
 	}
-	return (1);
+	return (file_in_str);
 }
 
 int get_tetraminos_form (char *file_in_str, char *temp, char **argv)
@@ -81,16 +86,16 @@ int get_tetraminos_form (char *file_in_str, char *temp, char **argv)
 	simbol = 'A';
 	if ((fd = open(argv[1], O_RDONLY) == -1)) //check close(fd) in error
 		return (-1);
-	get_tetramino(fd, file_in_str, temp);
-	if (is_it_tetra(file_in_str) != 0)
+	char *tempo = get_tetramino(fd, file_in_str, temp);
+	if (is_it_tetra(tempo) != 0)
 		return (-1);
-	head = form_new(file_in_str, simbol);
+	head = form_new(tempo, simbol);
 	buf2 = head;
-	while (get_tetramino(fd, file_in_str, temp) != -1) //TODO: This is not working becous in after ft_strcat will \0 at the end
+	while ((tempo = get_tetramino(fd, file_in_str, temp)) != "error") //TODO: This is not working becous in after ft_strcat will \0 at the end
 	{
-		if (is_it_tetra(file_in_str) != 0)
+		if (is_it_tetra(tempo) != 0)
 			return (-1);
-		buf = form_new(file_in_str, ++simbol);
+		buf = form_new(tempo, ++simbol);
 		buf2->next = buf;
 		buf2 = buf;
 	}

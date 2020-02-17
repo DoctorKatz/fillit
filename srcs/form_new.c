@@ -20,7 +20,8 @@ t_form		*form_new(char *buf, char symbol)
 
 
 	row = 0;
-	if (!(new = (t_form*)malloc(sizeof(new))))
+	num = 0;
+	if (!(new = (t_form*)malloc(sizeof(t_form))))
 		return (NULL);
 	while (num < 20)
 	{

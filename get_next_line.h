@@ -18,7 +18,7 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-#define BUFF_SIZE	64
+#define BUFF_SIZE	256
 int		check_line(const int fd, char **line, char **str, ssize_t read_bytes);
 int		get_next_line(const int fd, char **line);
 

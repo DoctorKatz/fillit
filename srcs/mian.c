@@ -24,7 +24,7 @@ int main(int argc, char **argv)
 	}
 	//TODO: malloc temp & file_in_str & free
 	temp = (char *)malloc(sizeof(char) * 10);
-	file_in_str = (char *)malloc(sizeof(char) * MAX_BLOCKS * (MAX_SIMBOLS + 1));
+	file_in_str = (char *)malloc(sizeof(char) * 19 * (MAX_SIMBOLS + 1));
 	close(fd);
 	if (read_blocks_for_check(file_in_str, temp, argv) != 1)
 	{

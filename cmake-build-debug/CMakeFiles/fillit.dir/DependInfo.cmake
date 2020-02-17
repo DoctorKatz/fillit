@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_putstr_fd.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_putstr_fd.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strcat.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strcat.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strchr.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strchr.c.o"
+  "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strclr.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strclr.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strdel.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strdel.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strdup.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strdup.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strjoin.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strjoin.c.o"

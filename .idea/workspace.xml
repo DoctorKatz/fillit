@@ -11,7 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fccdc56-d3e9-48e2-b381-36eb6e801a08" name="Default Changelist" comment="">
+    <list default="true" id="9fccdc56-d3e9-48e2-b381-36eb6e801a08" name="Default Changelist" comment="no error but not working">
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/get_tetraminos.c" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/srcs/parser.c" afterDir="false" />
@@ -50,17 +50,21 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FavoritesManager">
+    <favorites_list name="fillit" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1XiHYfJ591I9fSZ7aViH02U8amE" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="cf.advertisement.text.overridden" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.cidr.embedded.config" />
+    <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.valgrind" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -102,7 +106,8 @@
       <updated>1581522043679</updated>
       <workItem from="1581522046754" duration="2773000" />
       <workItem from="1581530083094" duration="17783000" />
-      <workItem from="1581609881854" duration="13161000" />
+      <workItem from="1581609881854" duration="25285000" />
+      <workItem from="1581948652617" duration="5534000" />
     </task>
     <servers />
   </component>
@@ -122,6 +127,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="no error but not working" />
+    <option name="LAST_COMMIT_MESSAGE" value="no error but not working" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -132,10 +141,20 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/parser.c</url>
-          <line>28</line>
-          <option name="timeStamp" value="5" />
+          <line>102</line>
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/srcs/solution.c</url>
+          <line>27</line>
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="file_in_str" language="ObjectiveC" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

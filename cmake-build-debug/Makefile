@@ -366,6 +366,33 @@ libft/ft_strchr.c.s:
 	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/libft/ft_strchr.c.s
 .PHONY : libft/ft_strchr.c.s
 
+libft/ft_strclr.o: libft/ft_strclr.c.o
+
+.PHONY : libft/ft_strclr.o
+
+# target to build an object file
+libft/ft_strclr.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/libft/ft_strclr.c.o
+.PHONY : libft/ft_strclr.c.o
+
+libft/ft_strclr.i: libft/ft_strclr.c.i
+
+.PHONY : libft/ft_strclr.i
+
+# target to preprocess a source file
+libft/ft_strclr.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/libft/ft_strclr.c.i
+.PHONY : libft/ft_strclr.c.i
+
+libft/ft_strclr.s: libft/ft_strclr.c.s
+
+.PHONY : libft/ft_strclr.s
+
+# target to generate assembly for a file
+libft/ft_strclr.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/libft/ft_strclr.c.s
+.PHONY : libft/ft_strclr.c.s
+
 libft/ft_strdel.o: libft/ft_strdel.c.o
 
 .PHONY : libft/ft_strdel.o
@@ -1023,6 +1050,9 @@ help:
 	@echo "... libft/ft_strchr.o"
 	@echo "... libft/ft_strchr.i"
 	@echo "... libft/ft_strchr.s"
+	@echo "... libft/ft_strclr.o"
+	@echo "... libft/ft_strclr.i"
+	@echo "... libft/ft_strclr.s"
 	@echo "... libft/ft_strdel.o"
 	@echo "... libft/ft_strdel.i"
 	@echo "... libft/ft_strdel.s"

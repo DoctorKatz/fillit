@@ -23,11 +23,11 @@ int		if_overlap(t_board *board, t_form *form)
 	y_pos = form->pos[num][1] + form->y_base;
 	while (num < 4 && board->map[y_pos][x_pos] == '.')
 	{
-		num++;
 		x_pos = form->pos[num][0] + form->x_base;
 		y_pos = form->pos[num][1] + form->y_base;
+		num++;
 	}
-	if (num == 3)
+	if (num == 4 && board->map[y_pos][x_pos] == '.')
 		return (1);
 	else
 		return (0);

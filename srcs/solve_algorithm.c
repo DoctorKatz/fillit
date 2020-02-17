@@ -22,7 +22,7 @@ int		solve_algorithm(t_board *board, t_form *form)
 	{
 		while (beyond_borders(form, board->size, 0))
 		{
-			if (!if_overlap(board, form))
+			if (if_overlap(board, form))
 			{
 				change_symbols(board, form, form->symbol);
 				if (solve_algorithm(board, form->next))

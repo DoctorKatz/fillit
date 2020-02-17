@@ -26,5 +26,6 @@ t_board		*board_new(int b_size)
 		ft_memset(board->map[i], '.', b_size);
 		i++;
 	}
+	board->size = b_size;
 	return (board);
 }

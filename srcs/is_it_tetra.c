@@ -20,6 +20,7 @@ int		is_it_tetra(char *buf)
 
 	i = 0;
 	count = 0;
+	num = 0;
 	while (i <= 18)
 	{
 		if (buf[i] == '#')

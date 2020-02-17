@@ -61,15 +61,16 @@ char  *get_tetramino(int fd, char *file_in_str, char *temp)
 	file_in_str[4] = 'q';
 	file_in_str[5] = '\0';
 	if (ft_strlen(temp) == 1 && temp[0] == '\0')
-		if (get_next_line(fd, &temp) != 1)//for \n like deviders block. I don't know, if last \n get in this "if", we loose
+		if (get_next_line(fd, &temp) < 0)//for \n like deviders block. I don't know, if last \n get in this "if", we loose
 			return ("error");
 	while (i < 4) //TODO: check if in file will half tetramino (2 string)
 	{
-		if(get_next_line(fd, &temp) != 1)
+		if(get_next_line(fd, &temp) < 0)
 			return ("error");
 		temp[4] = 'q';
 		temp[5] = '\0';
 		ft_strcat(file_in_str, temp);
+		ft_strclr(temp);
 		i++;
 	}
 	return (file_in_str);
@@ -87,17 +88,22 @@ int get_tetraminos_form (char *file_in_str, char *temp, char **argv)
 	if ((fd = open(argv[1], O_RDONLY) == -1)) //check close(fd) in error
 		return (-1);
 	char *tempo = get_tetramino(fd, file_in_str, temp);
-	if (is_it_tetra(tempo) != 0)
+	if (is_it_tetra(tempo) == 0)
 		return (-1);
 	head = form_new(tempo, simbol);
 	buf2 = head;
 	while ((tempo = get_tetramino(fd, file_in_str, temp)) != "error") //TODO: This is not working becous in after ft_strcat will \0 at the end
 	{
-		if (is_it_tetra(tempo) != 0)
+		if (tempo[0] == '\0')
+			break;
+		if (is_it_tetra(tempo) == 0 && tempo)
 			return (-1);
-		buf = form_new(tempo, ++simbol);
-		buf2->next = buf;
-		buf2 = buf;
+		if (tempo)
+		{
+			buf		   = form_new(tempo, ++simbol);
+			buf2->next = buf;
+			buf2	   = buf;
+		}
 	}
 	close(fd);
 	solution(head);

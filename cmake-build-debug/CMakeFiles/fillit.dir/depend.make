@@ -40,6 +40,9 @@ CMakeFiles/fillit.dir/libft/ft_strlen.c.o: ../libft/ft_strlen.c
 CMakeFiles/fillit.dir/libft/ft_strncat.c.o: ../libft/ft_strncat.c
 CMakeFiles/fillit.dir/libft/ft_strncat.c.o: ../libft/libft.h
 
+CMakeFiles/fillit.dir/libft/ft_strncpy.c.o: ../libft/ft_strncpy.c
+CMakeFiles/fillit.dir/libft/ft_strncpy.c.o: ../libft/libft.h
+
 CMakeFiles/fillit.dir/libft/ft_strnew.c.o: ../libft/ft_strnew.c
 CMakeFiles/fillit.dir/libft/ft_strnew.c.o: ../libft/libft.h
 

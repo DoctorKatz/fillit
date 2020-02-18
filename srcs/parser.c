@@ -16,6 +16,7 @@
 int read_blocks_for_check(char *file_in_str, char *temp, char **argv)
 {
 	int fd;
+	int i = 0;
 
 	if ((fd = open(argv[1], O_RDONLY) == -1)) //check close(fd) in error
 		return (0);
@@ -23,15 +24,24 @@ int read_blocks_for_check(char *file_in_str, char *temp, char **argv)
 		//return (0);
 	while (get_next_line(fd, &temp) == 1)
 	{
-		if (ft_strlen(temp) == 1 && temp[0] == '\0')
+		/*if (ft_strlen(temp) == 1 && temp[0] == '\0')
 			if (get_next_line(fd, &temp) != 1)//for \n like deviders block. I don't know, if last \n get in this "if", we loose
 				return (0);
 		if ((ft_strlen(temp) != 4 && temp[4] != '\n') && ((temp[0] != '\0')))
-			return (0);
-		ft_strncat(file_in_str, temp, 4);
+			return (0);*/
+		i++;
+		if(i == 5)
+		{
+			i = 0;
+			if(ft_strlen(temp) != 0)
+				return (0);
+		}
+		ft_strcat(file_in_str, temp);
 	}
 	if (check_simbols(file_in_str) == -1)
 		return (0);
+	free (temp);
+	free(file_in_str);
 	close(fd);
 	return (1);
 }
@@ -43,11 +53,12 @@ int check_simbols(char *str)
 	len = ft_strlen(str);
 	while (len > 0)
 	{
-		if (str[len] != '#' && str[len] != '.' && str[ft_strlen(str)])
+		len--;
+		if (str[len] != '#' && str[len] != '.')
 		{
 			return (-1);
 		}
-		len--;
+
 	}
 }
 
@@ -73,6 +84,7 @@ char  *get_tetramino(int fd, char *file_in_str, char *temp)
 		ft_strclr(temp);
 		i++;
 	}
+
 	return (file_in_str);
 }
 
@@ -107,5 +119,18 @@ int get_tetraminos_form (char *file_in_str, char *temp, char **argv)
 	}
 	close(fd);
 	solution(head);
+	form_free(&head);
 	return (1);
+}
+
+void form_free(t_form **head)
+{
+	t_form* prev = NULL;
+
+	while ((*head)->next) {
+		prev = (*head);
+		(*head) = (*head)->next;
+		free(prev);
+	}
+	free(*head);
 }

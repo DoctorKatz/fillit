@@ -32,6 +32,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/fillit.dir/libft/ft_putstr_fd.c.o"
   "CMakeFiles/fillit.dir/libft/ft_bzero.c.o"
   "CMakeFiles/fillit.dir/libft/ft_strclr.c.o"
+  "CMakeFiles/fillit.dir/libft/ft_strncpy.c.o"
   "fillit.pdb"
   "fillit"
 )

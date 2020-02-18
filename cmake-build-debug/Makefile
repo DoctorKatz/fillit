@@ -528,6 +528,33 @@ libft/ft_strncat.c.s:
 	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/libft/ft_strncat.c.s
 .PHONY : libft/ft_strncat.c.s
 
+libft/ft_strncpy.o: libft/ft_strncpy.c.o
+
+.PHONY : libft/ft_strncpy.o
+
+# target to build an object file
+libft/ft_strncpy.c.o:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/libft/ft_strncpy.c.o
+.PHONY : libft/ft_strncpy.c.o
+
+libft/ft_strncpy.i: libft/ft_strncpy.c.i
+
+.PHONY : libft/ft_strncpy.i
+
+# target to preprocess a source file
+libft/ft_strncpy.c.i:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/libft/ft_strncpy.c.i
+.PHONY : libft/ft_strncpy.c.i
+
+libft/ft_strncpy.s: libft/ft_strncpy.c.s
+
+.PHONY : libft/ft_strncpy.s
+
+# target to generate assembly for a file
+libft/ft_strncpy.c.s:
+	$(MAKE) -f CMakeFiles/fillit.dir/build.make CMakeFiles/fillit.dir/libft/ft_strncpy.c.s
+.PHONY : libft/ft_strncpy.c.s
+
 libft/ft_strnew.o: libft/ft_strnew.c.o
 
 .PHONY : libft/ft_strnew.o
@@ -1068,6 +1095,9 @@ help:
 	@echo "... libft/ft_strncat.o"
 	@echo "... libft/ft_strncat.i"
 	@echo "... libft/ft_strncat.s"
+	@echo "... libft/ft_strncpy.o"
+	@echo "... libft/ft_strncpy.i"
+	@echo "... libft/ft_strncpy.s"
 	@echo "... libft/ft_strnew.o"
 	@echo "... libft/ft_strnew.i"
 	@echo "... libft/ft_strnew.s"

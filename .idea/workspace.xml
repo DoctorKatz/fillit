@@ -88,7 +88,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="fillit" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="map" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fillit" TARGET_NAME="fillit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fillit" RUN_TARGET_NAME="fillit">
+    <configuration name="fillit" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="samples/valid_sample_with_newline" PASS_PARENT_ENVS_2="true" PROJECT_NAME="fillit" TARGET_NAME="fillit" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="fillit" RUN_TARGET_NAME="fillit">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -107,7 +107,7 @@
       <workItem from="1581522046754" duration="2773000" />
       <workItem from="1581530083094" duration="17783000" />
       <workItem from="1581609881854" duration="25285000" />
-      <workItem from="1581948652617" duration="18771000" />
+      <workItem from="1581948652617" duration="30009000" />
     </task>
     <servers />
   </component>
@@ -140,24 +140,14 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/srcs/solution.c</url>
-          <line>27</line>
-          <option name="timeStamp" value="38" />
+          <url>file://$PROJECT_DIR$/srcs/parser.c</url>
+          <line>36</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/srcs/parser.c</url>
-          <line>94</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/srcs/solve_algorithm.c</url>
-          <line>20</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/srcs/if_overlap.c</url>
-          <line>20</line>
-          <option name="timeStamp" value="55" />
+          <line>40</line>
+          <option name="timeStamp" value="63" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

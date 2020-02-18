@@ -135,6 +135,9 @@
 		<Unit filename="/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strncat.c">
 			<Option target="fillit"/>
 		</Unit>
+		<Unit filename="/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strncpy.c">
+			<Option target="fillit"/>
+		</Unit>
 		<Unit filename="/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strnew.c">
 			<Option target="fillit"/>
 		</Unit>

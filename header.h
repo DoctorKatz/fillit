@@ -56,6 +56,7 @@ int						check_simbols(char *str);
 char						*get_tetramino(int fd, char *file_in_str, char *temp);
 int						get_tetraminos_form (char *file_in_str, \
 												char *temp, char **argv);
+void form_free(t_form **head);
 
 #define MAX_BLOCKS 20
 #define MAX_SIMBOLS 5

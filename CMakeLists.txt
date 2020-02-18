@@ -43,4 +43,5 @@ add_executable(fillit
         libft/ft_putstr_fd.c
         libft/ft_bzero.c
         libft/ft_strclr.c
+        libft/ft_strncpy.c
         get_next_line.h)

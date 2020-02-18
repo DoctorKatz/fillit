@@ -64,6 +64,5 @@ int				check_line(const int fd, char **line, char **str, ssize_t read_bytes)
 		*line = ft_strdup(str[fd]);
 		ft_strdel(&str[fd]);
 	}
-	//free(temp);
 	return (1);
 }

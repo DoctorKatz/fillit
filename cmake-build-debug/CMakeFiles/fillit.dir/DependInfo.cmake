@@ -19,6 +19,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strjoin.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strjoin.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strlen.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strlen.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strncat.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strncat.c.o"
+  "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strncpy.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strncpy.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strnew.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strnew.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/libft/ft_strsub.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/libft/ft_strsub.c.o"
   "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/srcs/beyond_borders.c" "/mnt/c/Users/n.kats/OneDrive/Desktop/fillit_git/cmake-build-debug/CMakeFiles/fillit.dir/srcs/beyond_borders.c.o"

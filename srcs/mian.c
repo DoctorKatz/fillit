@@ -9,8 +9,6 @@
 int main(int argc, char **argv)
 {
 	int		fd;
-	char	*file_in_str;
-	char	*temp;
 
 	if (argc != 2)
 	{
@@ -23,25 +21,17 @@ int main(int argc, char **argv)
 		return (1);
 	}
 	//TODO: malloc temp & file_in_str & free
-	temp = (char *)malloc(sizeof(char) * 10);
-	file_in_str = (char *)malloc(sizeof(char) * 19 * (MAX_SIMBOLS + 1));
 	close(fd);
-	if (read_blocks_for_check(file_in_str, temp, argv) != 1)
+	if (read_blocks_for_check(argv) != 1)
 	{
-		free(temp);
-		free(file_in_str);
-		ft_putstr("error");
+		ft_putstr("error1");
 		return (-1);
 	}
-	if (get_tetraminos_form(file_in_str, temp, argv) != 1)
+	if (get_tetraminos_form(argv) != 1)
 	{
-		free(temp);
-		free(file_in_str);
-		ft_putstr("error");
+		ft_putstr("error2");
 		return (-1);
 	}
-	free(temp);
-	free(file_in_str);
 	return (1);
 }
 

@@ -6,7 +6,7 @@
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/29 14:50:29 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/12 18:20:00 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/15 19:24:00 by lgunship         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ t_form		*form_new(char *buf, char symbol)
 	new->symbol = symbol;
 	new->x_base = 0;
 	new->y_base = 0;
+	new->next = NULL;
 	return (form_alignment(new));
 }

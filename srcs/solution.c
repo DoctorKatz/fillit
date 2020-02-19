@@ -6,7 +6,7 @@
 /*   By: cwheatgr <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/10 10:05:27 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/10 14:43:41 by cwheatgr         ###   ########.fr       */
+/*   Updated: 2020/02/19 14:30:49 by lgunship         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ void		solution(t_form *form)
 	}
 	board_output(board);
 	board_free(board);
+	form_free(&form);
 }

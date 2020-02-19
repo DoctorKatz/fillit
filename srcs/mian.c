@@ -1,8 +1,15 @@
-//
-// Created by n.kats on 12.02.2020.
-//
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   mian.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lgunship <lgunship@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/13 01:02:53 by lgunship          #+#    #+#             */
+/*   Updated: 2020/02/19 14:49:36 by null             ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-#include "get_next_line.h"
 #include "header.h"
 #include "libft/libft.h"
 
@@ -12,7 +19,7 @@ int main(int argc, char **argv)
 
 	if (argc != 2)
 	{
-		ft_putstr("error");
+		ft_putstr("usage ./fillit [input_file]");
 		return (-1);
 	}
 	if ((fd = open(argv[1], O_RDONLY) == -1))
@@ -20,18 +27,20 @@ int main(int argc, char **argv)
 		ft_putstr("error");
 		return (1);
 	}
-	//TODO: malloc temp & file_in_str & free
 	close(fd);
 	if (read_blocks_for_check(argv) != 1)
 	{
 		ft_putstr("error1");
 		return (-1);
 	}
-	if (get_tetraminos_form(argv) != 1)
+	if ((fd = open(argv[1], O_RDONLY) == -1))
+		return (-1);
+	if (get_tetraminos_form(fd, argv) != 1)
 	{
 		ft_putstr("error2");
 		return (-1);
 	}
+	close(fd);
 	return (1);
 }
 

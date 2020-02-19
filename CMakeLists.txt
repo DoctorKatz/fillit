@@ -25,7 +25,9 @@ add_executable(fillit
         srcs/solve_algorithm.c
         srcs/parser.c
         srcs/get_next_line.c
-        header.h srcs/mian.c
+        srcs/read_and_check.c
+        srcs/form_free.c
+        srcs/mian.c
         libft/ft_strnew.c
         libft/ft_memset.c
         libft/ft_putchar.c
@@ -44,4 +46,5 @@ add_executable(fillit
         libft/ft_bzero.c
         libft/ft_strclr.c
         libft/ft_strncpy.c
-        get_next_line.h)
+        header.h
+        )

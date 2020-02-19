@@ -6,13 +6,12 @@
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 19:45:21 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/18 23:55:04 by lgunship         ###   ########.fr       */
+/*   Updated: 2020/02/19 14:52:11 by null             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HEADER_H
 # define HEADER_H
-#include "get_next_line.h"
 #include "libft/libft.h"
 
 #include <fcntl.h>
@@ -20,6 +19,8 @@
 #include <sys/stat.h>
 #include <sys/types.h>
 #include <unistd.h>
+
+#define BUFF_SIZE	256
 
 typedef struct			s_form //I think, my type is a good idea, kek
 {
@@ -36,6 +37,9 @@ typedef struct			s_board
 		int				size;
 }						t_board;
 //place for prototypes of all functions
+
+int						check_line(const int fd, char **line, char **str, ssize_t read_bytes);
+int						get_next_line(const int fd, char **line);
 t_form					*form_new(char *buf, char symbol);
 int						beyond_borders(t_form *form, int b_size, int flag);
 void					board_free(t_board *board);
@@ -53,12 +57,8 @@ int						solve_algorithm(t_board *board, t_form *form);
 
 int						read_blocks_for_check(char **argv);
 int						check_simbols(char *str);
-char						*get_tetramino(int fd, char *tetraminoshka);
-int						get_tetraminos_form (char **argv);
-void form_free(t_form **head);
-
-#define MAX_BLOCKS 20
-#define MAX_SIMBOLS 5
+char					*get_tetramino(int fd, char *tetraminoshka);
+int						get_tetraminos_form (int fd, char **argv);
+void					form_free(t_form **head);
 
 #endif
-

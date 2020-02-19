@@ -35,7 +35,7 @@ char	*get_tetramino(int fd, char *tetraminoshka)
 	return (tetraminoshka);
 }
 
-int get_tetraminos_form (int fd, char **argv)
+int get_tetraminos_form (int fd)
 {
 	char	simbol;
 	char	*temp;

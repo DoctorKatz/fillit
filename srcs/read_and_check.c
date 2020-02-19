@@ -56,3 +56,4 @@ int check_simbols(char *str)
 	}
 	return (1);
 }
+

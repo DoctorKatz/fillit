@@ -24,3 +24,4 @@ void form_free(t_form **head)
 	}
 	free(*head);
 }
+

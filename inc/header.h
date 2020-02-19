@@ -12,7 +12,7 @@
 
 #ifndef HEADER_H
 # define HEADER_H
-#include "libft/libft.h"
+#include "../libft/libft.h"
 
 #include <fcntl.h>
 #include <stdlib.h>
@@ -58,7 +58,7 @@ int						solve_algorithm(t_board *board, t_form *form);
 int						read_blocks_for_check(char **argv);
 int						check_simbols(char *str);
 char					*get_tetramino(int fd, char *tetraminoshka);
-int						get_tetraminos_form (int fd, char **argv);
+int						get_tetraminos_form (int fd);
 void					form_free(t_form **head);
 
 #endif

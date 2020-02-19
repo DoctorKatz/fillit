@@ -39,3 +39,4 @@ int		is_it_tetra(char *buf)
 	}
 	return ((count == 6 || count == 8) && num == 4);
 }
+

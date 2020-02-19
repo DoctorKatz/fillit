@@ -1,37 +1,38 @@
-NAME	:= fillit
+NAME	:=	fillit
 
 # directories
-SRC_DIR	:= ./src
-INC_DIR	:= ./includes
-OBJ_DIR	:= ./obj
-LIB_DIR	:= ./libft
+SRC_DIR	:=	./srcs
+INC_DIR	:=	./inc
+OBJ_DIR	:=	./obj
+LIB_DIR	:=	./libft
 
 # src / obj files
-SRC		:= srcs/beyond_borders \
-                 srcs/board_free \
-                 srcs/board_new \
-                 srcs/board_output \
-                 srcs/board_size. \
-                 srcs/change_symbols.c \
-                 srcs/form_alignment.c \
-                 srcs/form_count.c \
-                 srcs/form_new.c \
-                 srcs/if_overlap.c \
-                 srcs/is_it_tetra.c \
-                 srcs/solution.c \
-                 srcs/solve_algorithm.c \
-                 srcs/parser.c \
-                 srcs/get_next_line.c \
-                 srcs/read_and_check.c \
-                 srcs/form_free.c \
-                 srcs/mian.c \
-OBJ		:= $(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
+SRC	:=	beyond_borders.c \
+	/board_free.c \
+	/board_new.c \
+	/board_output.c \
+	/board_size.c \
+	/change_symbols.c \
+	/form_alignment.c \
+	/form_count.c \
+	/form_new.c \
+	/if_overlap.c \
+	/is_it_tetra.c \
+	/solution.c \
+	/solve_algorithm.c \
+	/parser.c \
+	/get_next_line.c \
+	/read_and_check.c \
+	/form_free.c \
+	/main.c
+
+OBJ	:=	$(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 
 # compiler and flags
-CC		:= gcc
-CFLAGS	:= -Wall -Wextra -Werror -pedantic -std=c99
-OFLAGS	:= -pipe -flto
-CFLAGS	+= $(OFLAGS)
+CC:=	gcc
+CFLAGS:=	-Wall -Wextra -Werror -pedantic -std=c99
+OFLAGS:=	-pipe -flto
+CFLAGS+=	$(OFLAGS)
 
 # libraries
 L_FT	:= $(LIB_DIR)/

@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "header.h"
-#include "libft/libft.h"
 
 int main(int argc, char **argv)
 {
@@ -35,7 +34,7 @@ int main(int argc, char **argv)
 	}
 	if ((fd = open(argv[1], O_RDONLY) == -1))
 		return (-1);
-	if (get_tetraminos_form(fd, argv) != 1)
+	if (get_tetraminos_form(fd) != 1)
 	{
 		ft_putstr("error2");
 		return (-1);

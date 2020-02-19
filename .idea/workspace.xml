@@ -55,7 +55,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
@@ -64,8 +63,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="cf.advertisement.text.overridden" value="true" />
-    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="dynamic.analysis.tools.valgrind" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -108,7 +107,7 @@
       <workItem from="1581522046754" duration="2773000" />
       <workItem from="1581530083094" duration="17783000" />
       <workItem from="1581609881854" duration="25285000" />
-      <workItem from="1581948652617" duration="31990000" />
+      <workItem from="1581948652617" duration="30009000" />
     </task>
     <servers />
   </component>

@@ -6,7 +6,7 @@
 /*   By: cwheatgr <cwheatgr@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/28 19:45:21 by cwheatgr          #+#    #+#             */
-/*   Updated: 2020/02/13 01:29:58 by lgunship         ###   ########.fr       */
+/*   Updated: 2020/02/18 23:55:04 by lgunship         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,11 +51,10 @@ int						is_it_tetra(char *buf);
 void					solution(t_form *form);
 int						solve_algorithm(t_board *board, t_form *form);
 
-int						read_blocks_for_check(char *file_in_str, char *temp,char **argv);
+int						read_blocks_for_check(char **argv);
 int						check_simbols(char *str);
-char						*get_tetramino(int fd, char *file_in_str, char *temp);
-int						get_tetraminos_form (char *file_in_str, \
-												char *temp, char **argv);
+char						*get_tetramino(int fd, char *tetraminoshka);
+int						get_tetraminos_form (char **argv);
 void form_free(t_form **head);
 
 #define MAX_BLOCKS 20

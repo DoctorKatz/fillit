@@ -4,7 +4,7 @@ NAME	:=	fillit
 SRC_DIR	:=	./srcs
 INC_DIR	:=	./inc
 OBJ_DIR	:=	./obj
-LIB_DIR	:=	./libft
+LIB_DIR	:=	./lib/libft
 
 # src / obj files
 SRC	:=	beyond_borders.c \
@@ -30,14 +30,14 @@ OBJ	:=	$(addprefix $(OBJ_DIR)/,$(SRC:.c=.o))
 
 # compiler and flags
 CC:=	gcc
-CFLAGS:=	-Wall -Wextra -Werror -pedantic -std=c99
-OFLAGS:=	-pipe -flto
+CFLAGS:=	-Wall -Wextra -Werror -pedantic -v
+OFLAGS:=	-pipe
 CFLAGS+=	$(OFLAGS)
 
 # libraries
 L_FT	:= $(LIB_DIR)/
 
-#include $(L_FT)/libft.mk
+include $(L_FT)/libft.mk
 
 .PHONY: all clean fclean re
 

@@ -54,7 +54,7 @@ int				check_line(const int fd, char **line, char **str, ssize_t read_bytes)
 		free(str[fd]);
 		str[fd] = temp;
 
-		if (str[fd] == '\0')
+		if (*str[fd] == '\0')
 			ft_strdel(&str[fd]);
 	}
 	else if (str[fd][length] == '\0')

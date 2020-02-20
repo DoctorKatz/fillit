@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../inc/header.h"
 
 int		beyond_borders(t_form *form, int b_size, int flag)
 {

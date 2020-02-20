@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "header.h"
+#include "../inc/header.h"
 
 t_board		*board_new(int b_size)
 {
